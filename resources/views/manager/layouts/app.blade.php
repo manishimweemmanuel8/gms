@@ -37,7 +37,27 @@
     <link type="text/css" href="{{asset('asset/admin/css/custom_css/fitness.css')}}" rel="stylesheet" />
     <link type="text/css" href="{{asset('asset/admin/css/custom_css/panel.css')}}" rel="stylesheet" />
     <link type="text/css" href="{{asset('asset/admin/css/custom_css/admin_dashboard.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{asset('asset/admin/vendors/fancyBox/source/jquery.fancybox8cbb.css?v=2.1.5')}}" rel="stylesheet" />
+
+    <link type="text/css" href="{{asset('asset/admin/vendors/fancyBox/source/helpers/jquery.fancybox-buttons3447.css?v=1.0.5')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('asset/admin/vendors/jQuery-File-Upload/css/jquery.fileupload.css')}}" />
+    <link rel="stylesheet" href="{{asset('asset/admin/vendors/jQuery-File-Upload/css/jquery.fileupload-ui.css')}}" />
     <!-- end of page level css -->
+
+
+    <!-- end of global css -->
+    <!--page level css -->
+    <link type="text/css" href="{{asset('asset/admin/vendors/jasny-bootstrap/css/jasny-bootstrap.min.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{asset('asset/admin/vendors/datatables/css/dataTables.bootstrap.css')}}" rel="stylesheet" />
+
+    <link type="text/css" href="{{asset('asset/admin/vendors/datatables/css/dataTables.bootstrap.min.css')}}" rel="stylesheet" />
+
+    <link type="text/css" href="{{asset('asset/admin/css/custom_css/users_list.css" rel="stylesheet')}}" />
+
+    <!-- end of global css -->
+    <!--page level css -->
+    <link type="text/css" href="{{asset('asset/admin/css/custom_css/news.css" rel="stylesheet')}}" />
+
 </head>
 
 <body>
@@ -171,6 +191,36 @@
     <script src="{{asset('asset/admin/vendors/inputmask/inputmask/inputmask.date.extensions.js')}}" type="text/javascript"></script>
     <script src="{{asset('asset/admin/js/custom_js/admin_index.js')}}" type="text/javascript"></script>
     <!-- end of page level js -->
+
+
+    <!-- end of page level js -->
+    <!-- begining of page level js -->
+    <script src="{{asset('asset/admin/vendors/datatables/js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('asset/admin/vendors/datatables/js/dataTables.bootstrap.js')}}" type="text/javascript"></script>
+    <script src="{{asset('asset/admin/js/custom_js/users_list.js')}}" type="text/javascript"></script>
+
+
+    <!-- end of page level js -->
+    <!-- begining of page level js -->
+    <script src="{{asset('asset/admin/js/custom_js/news.js')}}" type="text/javascript"></script>
+
+     <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/main.js')}}"></script>
+    <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/vendor/jquery.ui.widget.js')}}"></script>
+    <!-- The Templates plugin is included to render the upload/download listings -->
+    <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/tmpl.min.js')}}"></script>
+    <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+    <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/load-image.min.js')}}"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/jquery.fileupload.js')}}"></script>
+    <!-- The File Upload processing plugin -->
+    <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/jquery.fileupload-process.js')}}"></script>
+    <!-- The File Upload image preview & resize plugin -->
+    <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/jquery.fileupload-image.js')}}"></script>
+    <!-- The File Upload user interface plugin -->
+    <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/jquery.fileupload-ui.js')}}"></script>
+    <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/jquery.fileupload-validate.js')}}"></script>
+    <script src="{{asset('asset/admin/vendors/holder/holder.js')}}" type="text/javascript"></script>
+    <script src="{{asset('asset/admin/vendors/holder/holder.js')}}" type="text/javascript"></script>
 </body>
 
 

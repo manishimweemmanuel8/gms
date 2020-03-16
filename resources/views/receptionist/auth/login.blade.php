@@ -31,7 +31,7 @@
                      @csrf
                     <div class="form-group">
                         <label class="sr-only"></label>
-                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus >
+                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus >
                          @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -41,6 +41,11 @@
                     <div class="form-group">
                         <label class="sr-only"></label>
                         <input type="password" class="form-control" name="password" placeholder="Password" required>
+                          @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
                     </div>
                     <div class="checkbox text-left">
                         <label>
@@ -49,7 +54,11 @@
                     </div>
                     <input type="submit" class="btn btn-block btn-warning" value="Log In">
                 </form>
-                <p class="text-right"><a href="user_forgot.html" class="text-warning forgot_color" style="color: white">Forgot Password?</a></p>
+                <p class="text-right">
+                     <a class="text-warning forgot_color" href="{{ route('receptionist.password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
+                                </a>
+                </p>
             </div>
         </div>
     </div>

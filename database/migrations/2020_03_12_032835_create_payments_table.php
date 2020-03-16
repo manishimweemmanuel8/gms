@@ -19,6 +19,7 @@ class CreatePaymentsTable extends Migration
             $table->integer('receptionist_id');
             $table->integer('subscription_id');
             $table->date('expirydate');
+            $table->integer('amount');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -19,6 +19,7 @@ class CreateCustomersTable extends Migration
             $table->string('cardCode');
             $table->string('type');
             $table->string('corporate_id');
+            $table->string('phone')
             $table->timestamps();
             $table->softDeletes();
         });

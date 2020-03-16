@@ -16,7 +16,7 @@ class CreatePaymentCorporatesTable extends Migration
         Schema::create('payment_corporates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('corporate_id');
-            $table->integer('subscription_id');
+            $table->integer('month');
             $table->decimal('amount');
             $table->date('expirydate');
             $table->timestamps();
