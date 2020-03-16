@@ -136,12 +136,33 @@
                             </a>
                         </li>
                         <li>
-                            <a href="admin_clubinfo.html">
+                            <a href="{{ url('/manager/corporate/create') }}">
                                 <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
-                                <span class="mm-text">Club Info</span>
+                                <span class="mm-text">Company</span>
                             </a>
                         </li>
 
+                          <li>
+                            <a href="{{ url('/manager/customer') }}">
+                                <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
+                                <span class="mm-text">Customer</span>
+                            </a>
+                        </li>
+
+                          <li>
+                            <a href="{{ url('/manager/payment/create') }}">
+                                <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
+                                <span class="mm-text">Payment</span>
+                            </a>
+                        </li>
+
+                           <li>
+                            <a href="{{ url('/manager/subscription/create') }}">
+                                <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
+                                <span class="mm-text">Subscription</span>
+                            </a>
+                        </li>
+ 
 
 
 

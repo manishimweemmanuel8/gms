@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Attendance extends Model
 {
     //
-     protected $fillable = ['payment_id','customer_id'];
+     protected $fillable = ['payment_id','receptionist_id'];
 
     use SoftDeletes; 
 }

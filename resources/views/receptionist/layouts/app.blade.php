@@ -143,12 +143,18 @@
                             </a>
                         </li>
                         <li>
-                            <a href="admin_clubinfo.html">
-                                <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
-                                <span class="mm-text">Club Info</span>
+                            <a href="{{ url('/receptionist/client/create') }}">
+                                <i class="text-success menu-icon fa fa-fw fa-user"></i>
+                                <span class="mm-text">Customer</span>
                             </a>
                         </li>
 
+                         <li>
+                            <a href="{{ url('/receptionist/payment') }}">
+                                <i class="text-success menu-icon fa fa-fw fa-money"></i>
+                                <span class="mm-text">Payment</span>
+                            </a>
+                        </li>
 
 
 

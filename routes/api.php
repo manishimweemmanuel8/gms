@@ -49,5 +49,5 @@ Route::post('/corporate' , 'apicorporate@corporateCustomer');
 Route::get('committed', function() {
     return $committed=DB::table('commiteds')->get();
 });
-Route::get('/committedSport' , 'apicommitted@sport');
-Route::post('/committed', 'apicommitted@committedCustomer');
+Route::get('/committedSport' , 'ApiCommitted@sport');
+Route::post('/committed', 'ApiComitted@committedCustomer');

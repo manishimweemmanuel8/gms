@@ -10,7 +10,7 @@ class CorporateAttendance extends Model
 {
     //
      //
-     protected $fillable = ['paymentcorporate_id','customer_id'];
+     protected $fillable = ['paymentcorporate_id','receptionist_id'];
 
     use SoftDeletes;
 }
