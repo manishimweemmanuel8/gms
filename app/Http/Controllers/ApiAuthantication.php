@@ -41,7 +41,7 @@ class ApiAuthantication extends Controller
 
          else{
         return response()
-            ->json(['status' => 2, 'message' => 'Ntitubashije kubamenya!']);
+            ->json(['status' => 2, 'message' => 'Ntitubashije kubamenya neza!']);
     }
 }
 
