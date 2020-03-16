@@ -23,7 +23,7 @@ class ApiSession extends Controller
     // $category=Input::get('category_id');
     // $sport=Input::get('sport_id');
     // $membership=Input::get('membership_id');
-       $receptionist=Input::get('id');
+       $receptionist_id=Input::get('receptionist_id');
        
 
         $todayDate = date("Y-m-d");
@@ -44,7 +44,7 @@ class ApiSession extends Controller
 
             Payment::create([
                 'customer_id'=> DB::table('customers')->where('phone',$customer)->value('id'),
-                'receptionist_id'=> DB::table('receptionists')->where('id',$receptionist)->value('name'),
+                'receptionist_id'=> DB::table('receptionists')->where('id',$receptionist_id)->value('name'),
                 'subscription_id'=> DB::table('subscriptions')->where('name','day')->value('id'),
                 'expirydate'=> date('Y-m-d'),
                 'amount'=>  DB::table('subscriptions')->where('name','day')->value('amount'),
@@ -56,7 +56,7 @@ class ApiSession extends Controller
         Attendance::create([
             'payment_id'       =>DB::table('payments')->where('customer_id',$customer_id)
                                      ->value('id') ,
-            'receptionist_id'     => 1,
+            'receptionist_id'     => $receptionist_id,
             
         ]);
                $payment = Payment::where('id', DB::table('payments')
@@ -83,7 +83,7 @@ class ApiSession extends Controller
 
          Payment::create([
                 'customer_id'=> DB::table('customers')->where('phone',$customer)->value('id'),
-                'receptionist_id'=> DB::table('receptionists')->where('id',$receptionist)->value('name'),
+                'receptionist_id'=> DB::table('receptionists')->where('id',$receptionist_id)->value('name'),
                 'subscription_id'=> DB::table('subscriptions')->where('name','day')->value('id'),
                 'expirydate'=> date('Y-m-d'),
                 'amount'=>  DB::table('subscriptions')->where('name','day')->value('amount'),
@@ -95,7 +95,7 @@ class ApiSession extends Controller
         Attendance::create([
             'payment_id'       =>DB::table('payments')->where('customer_id',$customer_id)
                                      ->value('id') ,
-            'receptionist_id'     => 1,
+            'receptionist_id'     => $receptionist_id,
             
         ]);
 

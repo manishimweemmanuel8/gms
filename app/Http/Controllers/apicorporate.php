@@ -13,6 +13,7 @@ class apicorporate extends Controller
     public function corporateCustomer(){
    $card_code=Input::get('card_code');
    $customer_id=DB::table('customers')->where('cardCode',$card_code)->value('id');
+   $receptionist_id=Input::get('receptionist_id');
    if ($customer_id) {
        # code...
 
@@ -64,7 +65,7 @@ class apicorporate extends Controller
 
                     CorporateAttendance::create([
                          'paymentcorporate_id'       =>$customer_id,
-                 		  'receptionist_id'     => 1,
+                 		  'receptionist_id'     => $receptionist_id,
                     ]);
                    
 
@@ -81,7 +82,7 @@ class apicorporate extends Controller
                             'expiration date' =>DB::table('payment_corporates')->where('corporate_id',$corporate_id)->value('expirydate'),
                             'company' =>DB::table('corporates')->where('id',$corporate_id)->value("names"),
                             'message'=> 'you allow to attend',
-                            'ticket number'=> DB::table('attendances')->count()
+                            'ticket number'=> DB::table('corporate_attendances')->count()
 
                   
                         

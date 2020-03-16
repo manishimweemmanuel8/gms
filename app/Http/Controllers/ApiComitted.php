@@ -15,6 +15,7 @@ class ApiComitted extends Controller
    public function committedCustomer(){
    $card_code=Input::get('card_code');
    $payment=DB::table('customers')->where('cardCode',$card_code)->value('id');
+   $receptionist_id=Input::get('receptionist_id');
    if ($payment) {
        # code...
 
@@ -55,7 +56,7 @@ class ApiComitted extends Controller
                     Attendance::create([
                          'payment_id'       =>DB::table('payments')->where('customer_id',$payment)
                                      ->value('id') ,
-                 			'receptionist_id'     => 1,
+                 			'receptionist_id'     => $receptionist_id,
                     ]);
                    
 
