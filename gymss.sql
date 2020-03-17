@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Mar 16, 2020 at 09:39 PM
+-- Generation Time: Mar 17, 2020 at 10:06 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -37,7 +37,10 @@ INSERT INTO `attendances` (`id`, `payment_id`, `receptionist_id`, `created_at`, 
 (15, 7, 1, '2020-03-16', '2020-03-16 19:36:51', NULL),
 (16, 26, 3, '2020-03-16', '2020-03-16 19:39:17', NULL),
 (17, 26, 3, '2020-03-16', '2020-03-16 19:39:19', NULL),
-(18, 26, 3, '2020-03-16', '2020-03-16 19:39:20', NULL);
+(18, 26, 3, '2020-03-16', '2020-03-16 19:39:20', NULL),
+(19, 29, 3, '2020-03-17', '2020-03-17 07:23:47', NULL),
+(20, 29, 3, '2020-03-17', '2020-03-17 07:23:50', NULL),
+(21, 7, 1, '2020-03-17', '2020-03-17 07:23:58', NULL);
 
 -- --------------------------------------------------------
 
@@ -122,7 +125,8 @@ INSERT INTO `customers` (`id`, `names`, `cardCode`, `phone`, `type`, `corporate_
 (29, 'session', 'Y2c6KocyUu8efM0', '32834619', 'session', '4', '2020-03-16 16:08:40', '2020-03-16 16:08:40', NULL),
 (30, 'session', 'GD2d0Uy9Cyj9Uif', '3283461', 'session', '4', '2020-03-16 16:08:50', '2020-03-16 16:08:50', NULL),
 (31, 'ngabire 97te', '12334455', '07885745736', 'committed', '4', '2020-03-16 16:54:32', '2020-03-16 16:56:02', '2020-03-16 16:56:02'),
-(32, 'session', 'BuL8yKBWE9XvH1Q', '0781194127', 'session', '4', '2020-03-16 19:37:44', '2020-03-16 19:37:44', NULL);
+(32, 'session', 'BuL8yKBWE9XvH1Q', '0781194127', 'session', '4', '2020-03-16 19:37:44', '2020-03-16 19:37:44', NULL),
+(33, 'session', 'AEMzvwVdGaYN2a4', '0781194120', 'session', '4', '2020-03-17 07:23:47', '2020-03-17 07:23:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -239,7 +243,9 @@ INSERT INTO `payments` (`id`, `customer_id`, `receptionist_id`, `subscription_id
 (25, 31, 'receptionist1', 4, '2020-06-16', 100000, '2020-03-16 16:54:32', '2020-03-16 16:59:33', '2020-03-16 16:59:33'),
 (26, 32, 'receptionist3', 2, '2020-03-16', 5000, '2020-03-16 19:39:17', '2020-03-16 19:39:17', NULL),
 (27, 32, 'receptionist3', 2, '2020-03-16', 5000, '2020-03-16 19:39:19', '2020-03-16 19:39:19', NULL),
-(28, 32, 'receptionist3', 2, '2020-03-16', 5000, '2020-03-16 19:39:20', '2020-03-16 19:39:20', NULL);
+(28, 32, 'receptionist3', 2, '2020-03-16', 5000, '2020-03-16 19:39:20', '2020-03-16 19:39:20', NULL),
+(29, 33, 'receptionist3', 2, '2020-03-17', 5000, '2020-03-17 07:23:47', '2020-03-17 07:23:47', NULL),
+(30, 33, 'receptionist3', 2, '2020-03-17', 5000, '2020-03-17 07:23:50', '2020-03-17 07:23:50', NULL);
 
 -- --------------------------------------------------------
 
@@ -424,7 +430,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `attendances`
 --
 ALTER TABLE `attendances`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `corporates`
@@ -442,7 +448,7 @@ ALTER TABLE `corporate_attendances`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `managers`
@@ -460,7 +466,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `payment_corporates`

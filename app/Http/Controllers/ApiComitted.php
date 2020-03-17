@@ -15,7 +15,8 @@ class ApiComitted extends Controller
    public function committedCustomer(){
    $card_code=Input::get('card_code');
    $payment=DB::table('customers')->where('cardCode',$card_code)->value('id');
-   $receptionist_id=Input::get('receptionist_id');
+   $receptionist_id=DB::table('receptionists')->where('id',Input::get('receptionist_id'))->value('id');
+   
    if ($payment) {
        # code...
 

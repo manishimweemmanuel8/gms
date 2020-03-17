@@ -14,11 +14,19 @@ Route::group(['namespace' => 'Receptionist'], function() {
 
     //payment information
     Route::get('/payment', 'PaymentController@index')->name('payments.index');
-\    Route::get('/payment/{id}/edit','PaymentController@edit')->name('payments.edit');
+    Route::get('/payment/{id}/edit','PaymentController@edit')->name('payments.edit');
     Route::get('/payment/{id}/delete','PaymentController@destroy')->name('payments.destroy');
     Route::get('/payment/create','PaymentController@create')->name('payments.create');
     Route::post('/payment/create','PaymentController@store')->name('payments.store');
     Route::post('/payment/update','PaymentController@update')->name('payments.update');
+
+     //individual attendance information
+    Route::get('/individual', 'AttendanceController@index')->name('individual.index');
+    Route::get('/individual/{id}/delete','AttendanceController@destroy')->name('individual.destroy');
+
+     //company attendance information
+    Route::get('/company', 'CorporateAttendanceController@index')->name('company.index');
+    Route::get('/company/{id}/delete','CorporateAttendanceController@destroy')->name('company.destroy');
 
     // Login
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('receptionist.login');

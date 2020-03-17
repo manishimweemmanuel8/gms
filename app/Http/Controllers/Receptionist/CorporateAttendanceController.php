@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Receptionist;
+
+use App\Http\Controllers\Controller;
 
 use App\CorporateAttendance;
 use Illuminate\Http\Request;
-
+ 
 class CorporateAttendanceController extends Controller
 {
     /**
@@ -15,6 +17,8 @@ class CorporateAttendanceController extends Controller
     public function index()
     {
         //
+        $companies = CorporateAttendance::all();
+        return view('receptionist/company.index', compact('companies'));
     }
 
     /**
@@ -78,8 +82,12 @@ class CorporateAttendanceController extends Controller
      * @param  \App\CorporateAttendance  $corporateAttendance
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CorporateAttendance $corporateAttendance)
+    public function destroy($id)
     {
-        //
+       //
+         $company = CorporateAttendance::find($id);
+        //delete
+        $company->delete();
+        return redirect()->route('company.index');
     }
 }

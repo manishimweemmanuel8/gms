@@ -156,6 +156,20 @@
                             </a>
                         </li>
 
+                         <li>
+                            <a href="{{ url('/receptionist/individual') }}">
+                                <i class="text-success menu-icon fa fa-fw fa-user"></i>
+                                <span class="mm-text">individual Attendance</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ url('/receptionist/company') }}">
+                                <i class="text-success menu-icon fa fa-fw fa-user"></i>
+                                <span class="mm-text">Company Attendance</span>
+                            </a>
+                        </li>
+
 
 
 

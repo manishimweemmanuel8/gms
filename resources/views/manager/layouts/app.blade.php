@@ -162,6 +162,34 @@
                                 <span class="mm-text">Subscription</span>
                             </a>
                         </li>
+
+
+                        <li class="menu-dropdown">
+                            <a href="#">
+                                <i class="text-warning menu-icon fa fa-fw fa-graduation-cap"></i>
+                                <span class="mm-text"> Report</span>
+                                <span class="fa fa-angle-down pull-right"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/manager/report/daily">
+                                        <i class="text-primary fa fa-fw fa-th"></i>  Daily sales report
+                                    </a>
+                                </li>
+                           
+                                
+                            </ul>
+
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/manager/report/summary">
+                                        <i class="text-primary fa fa-fw fa-th"></i>  summary sales report
+                                    </a>
+                                </li>
+                           
+                                
+                            </ul>
+                        </li>
  
 
 

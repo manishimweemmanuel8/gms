@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Receptionist;
+
+use App\Http\Controllers\Controller;
 
 use App\Attendance;
 use Illuminate\Http\Request;
@@ -15,6 +17,8 @@ class AttendanceController extends Controller
     public function index()
     {
         //
+        $individuals = Attendance::all();
+        return view('receptionist/individual.index', compact('individuals'));
     }
 
     /**
@@ -78,8 +82,13 @@ class AttendanceController extends Controller
      * @param  \App\Attendance  $attendance
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Attendance $attendance)
+    public function destroy($id)
     {
         //
+         //
+         $individual = Attendance::find($id);
+        //delete
+        $individual->delete();
+        return redirect()->route('individual.index');
     }
 }
