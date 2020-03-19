@@ -14,7 +14,7 @@ class managerReportController extends Controller
      public function dailySalesReport(){
 
     	$payments = Payment::
-    				where('created_at', '>=', date('Y-m-d'). ' 00:00:00')
+    				where('expirydate', date('Y-m-d'))
     				->get();
         return view('manager/report.daily', compact('payments'));
 
@@ -140,6 +140,7 @@ class managerReportController extends Controller
 
 
         return view('manager/report.summary',compact('todayDate','cashSession','cashMonth','cashthreeMonth','cashsexMonth','cashtwelveMonth'));
+        return view('manager/report.summary');
 
     }
 

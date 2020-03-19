@@ -19,7 +19,7 @@ class CorporateCustomerController extends Controller
     public function index()
     {
         //
-        $customers = Customer::all();
+        $customers = Customer::where('type','corporate')->get();
         return view('manager/customer.index', compact('customers'));
     }
 
@@ -32,7 +32,7 @@ class CorporateCustomerController extends Controller
         {
             $corporates=null;
         if(!$corporate_id){
-            $corporates=DB::table('corporates')->get();
+            $corporates=Corporate::where('names','!=','self')->get();
         }
        
 
@@ -87,7 +87,7 @@ class CorporateCustomerController extends Controller
     {
          $corporates=null;
         if(!$corporate_id){
-            $corporates=Corporate::all();
+            $corporates=Corporate::where('names','!=','self')->get();
         }
         $customer = Customer::find($id);
 

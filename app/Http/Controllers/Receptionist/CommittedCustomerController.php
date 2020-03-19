@@ -19,7 +19,7 @@ class CommittedCustomerController extends Controller
      public function index()
     {
         //
-        $clients = Customer::where('type','!=','corporate')->get();
+        $clients = Customer::where('type','committed')->get();
         return view('receptionist/client.index', compact('clients'));
     }
 

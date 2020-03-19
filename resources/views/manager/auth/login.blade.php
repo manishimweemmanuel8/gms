@@ -24,7 +24,7 @@
     <div class="container">
         <div class="full-content-center">
             <div class="box bounceInLeft animated">
-                <img src="{{asset('asset/admin/img/logo.png')}}" class="logo" alt="image not found">
+                <img src="{{asset('asset/admin/img/logo.png')}}" height="50" width="170" class="logo" alt="image not found">
                 <h3 class="text-center">Manager Log In</h3>
                 <form class="form" id="log_in" method="POST" action="{{ route('manager.login') }}" aria-label="{{ __('Login') }}">
 

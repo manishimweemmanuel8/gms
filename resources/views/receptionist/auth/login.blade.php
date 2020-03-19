@@ -6,7 +6,7 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
-    <title>Login | Fit2Go Admin Template</title>
+    <title>Login | Fit flex </title>
     <link rel="shortcut icon" href="favicon.ico" />
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- global level css -->
@@ -24,7 +24,8 @@
     <div class="container">
         <div class="full-content-center">
             <div class="box bounceInLeft animated">
-                <img src="{{asset('asset/admin/img/logo.png')}}" class="logo" alt="image not found">
+                <img src="{{asset('asset/admin/img/logo.png')}}" class="logo" height="50" width="170"  alt="image not found">
+
                 <h3 class="text-center">Receptionist Log In</h3>
                 <form class="form" id="log_in" method="POST" action="{{ route('receptionist.login') }}" aria-label="{{ __('Login') }}">
 

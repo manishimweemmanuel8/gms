@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\Corporate;
 use Illuminate\Http\Request;
+use DB;
 
 class CorporateController extends Controller
 {
@@ -70,11 +71,16 @@ class CorporateController extends Controller
      * @param  \App\Corporate  $corporate
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id,$customer_id=null)
     {
         //
+        $customers=null;
+        if(!$customer_id){
+            $customers=DB::table("customers")->where('corporate_id',$id)->get();
+        }
+
         $corporate = Corporate::find($id);
-        return view('manager/corporate.edit',['corporate'=> $corporate]);
+        return view('manager/corporate.edit',['corporate'=> $corporate, 'customer_id'=>$customer_id,'customers'=>$customers]);
     }
 
     /**
@@ -90,11 +96,13 @@ class CorporateController extends Controller
         $request->validate([
              'name'=>'required',
             'email'=>'required',
+            'customer_id'=>'required',
         ]);
 
         $corporate = Corporate::find($request->input('id'));
         $corporate->names= $request->input('name');
         $corporate->email= $request->input('email');
+        $corporate->representative= $request->input('customer_id');
         $corporate->update(); 
         return redirect()->route('corporate.index')->with('info','corporate Updated Successfully');
     }

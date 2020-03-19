@@ -6,7 +6,6 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <!--section starts-->
-                <h2>Add subscription</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="">
@@ -86,6 +85,11 @@
                                                          <button type="submit" class="btn btn-primary">Add</button>
                                                         
                                                         <input type="reset" class="btn btn-white " value="Reset">
+
+                                                         <a href="{{ url('/manager/subscription') }}" class="btn btn-primary ">
+                                                            <i ></i>
+                                                            <span class="mm-text">View</span>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>

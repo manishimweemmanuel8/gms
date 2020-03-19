@@ -40,7 +40,7 @@ Route::group(['namespace' => 'Manager'], function() {
     Route::post('/subscription/create','SubscriptionController@store')->name('subscription.store');
     Route::post('/subscription/update','SubscriptionController@update')->name('subscription.update');
 
-
+    // report
     Route::get('/report/daily', 'managerReportController@dailySalesReport')->name('report.daily');
     Route::get('/report/summary', 'managerReportController@summarySalesReport')->name('report.summary');
     Route::post('/report/summaryBetween', 'managerReportController@betweenDateSalesReport')->name('report.between');

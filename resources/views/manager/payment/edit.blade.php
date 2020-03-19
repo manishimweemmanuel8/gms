@@ -6,7 +6,6 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <!--section starts-->
-                <h2>Edit Corporate</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="">
@@ -14,7 +13,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Corporate Payment</a>
+                        <a href="#">Corporate</a>
                     </li>
                     <li>
                         <a href="add_users.html" class="activated">Edit Corporate Payment</a>
@@ -56,7 +55,7 @@
                                                                 <i class="fa fa-fw fa-user-md text-primary"></i>
                                                             </span>
                                                         <select class="form-control" name="corporate_id" id="courses">
-                                                            <option value="{{$payment->corporate_id}}">{{$payment->corporate_id}}</option>
+                                                            <option value="{{$payment->corporate_id}}">{{DB::table('corporates')->where('id',$payment->corporate_id)->value('names')}}</option>
                                                             @foreach ($corporates as $corporate)
                                                             <option value="{{ $corporate->id }}">{{ $corporate->names}}</option>
                                                             @endforeach
@@ -131,6 +130,11 @@
                                                         <button type="submit" class="btn btn-primary">Edit</button>
                                                         
                                                         <input type="reset" class="btn btn-white " value="Reset">
+
+                                                          <a href="{{ url('/manager/payment') }}" class="btn btn-primary ">
+                                                            <i ></i>
+                                                            <span class="mm-text">View</span>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>

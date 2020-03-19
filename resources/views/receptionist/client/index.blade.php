@@ -4,7 +4,6 @@
 <aside class="right-side right-padding">
             <section class="content-header">
                 <!--section starts-->
-                <h2>Commited Customer</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index-2.html">
@@ -12,10 +11,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Commited Customer</a>
+                        <a href="#">Client</a>
                     </li>
                     <li>
-                        <a href="news.html">Commited Customer</a>
+                        <a href="news.html">Individual Client</a>
                     </li>
                 </ol>
             </section>
@@ -33,7 +32,7 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Customers
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Clients List
                             </h4>
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
@@ -41,7 +40,7 @@
                                 </span>
                             </div>
                             <div class="panel-body table-responsive">
-                                <table class="table table-bordered text-center" id="fitness-table">
+                                <table class="table table-bordered text-center" id="example">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Date</th>

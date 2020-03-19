@@ -4,7 +4,6 @@
 <aside class="right-side right-padding">
             <section class="content-header">
                 <!--section starts-->
-                <h2>Corporates Payment</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index-2.html">
@@ -26,7 +25,7 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Corporates
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Corporates Payment
                             </h4>
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
@@ -34,12 +33,11 @@
                                 </span>
                             </div>
                             <div class="panel-body table-responsive">
-                                <table class="table table-bordered text-center" id="fitness-table">
+                                <table class="table table-bordered text-center" id="example">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Date</th>
                                             <th class="text-center">Corporate</th>
-                                            <th class="text-center">Email</th>
                                             <th class="text-center">Subscribution(Month)</th>
                                             <th class="text-center">Amount</th>
                                             <th class="text-center">Expired Date</th>
@@ -51,8 +49,8 @@
                                         @foreach($payments as $payment)
                                         <tr>
                                             <td>{{$payment->created_at}}</td>
-                                             <td>{{$payment->corporate_id}}</td>
-                                            <td>{{$payment->corporate_id}} Email</td>
+                                             <td>{{DB::table('corporates')->where('id',$payment->corporate_id)->value("names")}}</td>
+                                            
                                             <td>{{$payment->month}}</td>
                                             <td>{{$payment->amount}}</td>
                                             <td>{{$payment->expirydate}}</td>

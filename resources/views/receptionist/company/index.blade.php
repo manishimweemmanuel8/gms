@@ -4,7 +4,6 @@
 <aside class="right-side right-padding">
             <section class="content-header">
                 <!--section starts-->
-                <h2>Commited Customer</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index-2.html">
@@ -12,10 +11,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">Commited Customer</a>
+                        <a href="">Company Customer</a>
                     </li>
                     <li>
-                        <a href="">Commited Customer</a>
+                        <a href=""> Customer Attendance</a>
                     </li>
                 </ol>
             </section>
@@ -33,7 +32,7 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Customers
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Attendance
                             </h4>
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
@@ -41,12 +40,12 @@
                                 </span>
                             </div>
                             <div class="panel-body table-responsive">
-                                <table class="table table-bordered text-center" id="fitness-table">
+                                <table class="table table-bordered text-center" id="example">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Date</th>
                                             <th class="text-center">receptionist</th>
-                                            <th class="text-center">Payment</th>
+                                            <!-- <th class="text-center">Payment</th> -->
                                             <th class="text-center">Type</th>
                                             <th class="text-center">Delete/Cancel</th>
                                         </tr>
@@ -55,8 +54,8 @@
                                         @foreach($companies as $company)
                                         <tr>
                                             <td>{{$company->created_at}}</td>
-                                             <td>{{$company->receptionist_id}}</td>
-                                            <td>{{$company->paymentcorporate_id}}</td>
+                                             <td>{{DB::table('receptionists')->where('id',$company->receptionist_id)->value("name")}}</td>
+                                            <!-- <td>{{$company->paymentcorporate_id}}</td> -->
                                             <td>Company</td>
                                             <td>
                                                 <a class="delete btn btn-danger" href="{{route('company.destroy',['id'=>$company->id])}}">

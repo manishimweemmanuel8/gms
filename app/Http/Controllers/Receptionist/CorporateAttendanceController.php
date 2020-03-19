@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\CorporateAttendance;
 use Illuminate\Http\Request;
+use Auth;
  
 class CorporateAttendanceController extends Controller
 {
@@ -17,7 +18,7 @@ class CorporateAttendanceController extends Controller
     public function index()
     {
         //
-        $companies = CorporateAttendance::all();
+        $companies = CorporateAttendance::where('receptionist_id',Auth::guard('receptionist')->user()->id)->get();
         return view('receptionist/company.index', compact('companies'));
     }
 

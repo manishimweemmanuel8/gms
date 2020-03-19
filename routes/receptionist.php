@@ -28,6 +28,25 @@ Route::group(['namespace' => 'Receptionist'], function() {
     Route::get('/company', 'CorporateAttendanceController@index')->name('company.index');
     Route::get('/company/{id}/delete','CorporateAttendanceController@destroy')->name('company.destroy');
 
+    //session
+
+    // Route::get('/session/create','session@create')->name('session.create');
+    // Route::post('/session/create','SessionController@store')->name('session.store');
+
+    Route::get('/session', 'SessionController@index')->name('session.index');
+    Route::get('/session/{id}/edit','SessionController@edit')->name('session.edit');
+    Route::get('/session/{id}/delete','SessionController@destroy')->name('session.destroy');
+    Route::get('/session/create','SessionController@create')->name('session.create');
+    Route::post('/session/create','SessionController@store')->name('session.store');
+    Route::post('/session/update','SessionController@update')->name('session.update');
+
+    // report
+    Route::get('/report/daily', 'HandoverController@dailySalesReport')->name('report.daily');
+    Route::get('/report/summary', 'HandoverController@summarySalesReport')->name('report.summary');
+
+
+
+
     // Login
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('receptionist.login');
     Route::post('login', 'Auth\LoginController@login');

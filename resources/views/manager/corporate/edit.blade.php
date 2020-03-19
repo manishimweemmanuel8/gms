@@ -77,7 +77,25 @@
                                                 </div>
 
 
-                                               
+                                                  <div class="form-group">
+                                                     <label class="col-md-3 control-label" for="usr_name">
+                                                        Representative
+                                                        <span class='require'>*</span>
+                                                    </label>
+                                                     <div class="col-md-7">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-fw fa-user-md text-primary"></i>
+                                                            </span>
+                                                        <select class="form-control" name="customer_id" id="courses">
+                                                            <option value="{{$corporate->representative}}">{{$corporate->representative}}</option>
+                                                            @foreach ($customers as $customer)
+                                                            <option value="{{ $customer->id }}">{{ $customer->names}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                                
                                                 
                                                 
@@ -90,6 +108,13 @@
                                                         <button type="submit" class="btn btn-primary">Edit</button>
                                                         
                                                         <input type="reset" class="btn btn-white " value="Reset">
+
+
+                                                            <a href="{{ url('/manager/corporate') }}" class="btn btn-primary ">
+                                                            <i ></i>
+                                                            <span class="mm-text">View</span>
+                                                        </a>
+
                                                     </div>
                                                 </div>
                                             </div>

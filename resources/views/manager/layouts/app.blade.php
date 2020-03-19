@@ -58,6 +58,12 @@
     <!--page level css -->
     <link type="text/css" href="{{asset('asset/admin/css/custom_css/news.css" rel="stylesheet')}}" />
 
+     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+           <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+
+             <link href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -67,7 +73,7 @@
         <nav class="navbar navbar-static-top">
             <a href="index-2.html" class="logo"> <!-- come back here and do real navigation-->
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                <img src="{{asset('asset/admin/img/logo.png')}}" alt="image not found">
+                 <img src="{{asset('asset/admin/img/logo.png')}}" height="50" width="170" alt="image not found">
             </a>
             <!-- Header Navbar: style can be found in header-->
             <!-- Sidebar toggle button-->
@@ -137,28 +143,28 @@
                         </li>
                         <li>
                             <a href="{{ url('/manager/corporate/create') }}">
-                                <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
+                                <i class="text-success menu-icon fa fa-fw fa-building"></i>
                                 <span class="mm-text">Company</span>
                             </a>
                         </li>
 
                           <li>
-                            <a href="{{ url('/manager/customer') }}">
-                                <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
+                            <a href="{{ url('/manager/customer/create') }}">
+                                <i class="text-success menu-icon fa fa-fw fa-users"></i>
                                 <span class="mm-text">Customer</span>
                             </a>
                         </li>
 
                           <li>
                             <a href="{{ url('/manager/payment/create') }}">
-                                <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
+                                <i class="text-success menu-icon fa fa-fw fa-shopping-cart"></i>
                                 <span class="mm-text">Payment</span>
                             </a>
                         </li>
 
                            <li>
                             <a href="{{ url('/manager/subscription/create') }}">
-                                <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
+                                <i class="text-success menu-icon fa fa-fw fa-check-circle"></i>
                                 <span class="mm-text">Subscription</span>
                             </a>
                         </li>
@@ -166,14 +172,14 @@
 
                         <li class="menu-dropdown">
                             <a href="#">
-                                <i class="text-warning menu-icon fa fa-fw fa-graduation-cap"></i>
+                                <i class="text-warning menu-icon fa fa-fw fa-flag"></i>
                                 <span class="mm-text"> Report</span>
                                 <span class="fa fa-angle-down pull-right"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
                                     <a href="/manager/report/daily">
-                                        <i class="text-primary fa fa-fw fa-th"></i>  Daily sales report
+                                        <i class="text-primary fa fa-sun-o"></i>  Daily sales report
                                     </a>
                                 </li>
                            
@@ -183,7 +189,7 @@
                             <ul class="sub-menu">
                                 <li>
                                     <a href="/manager/report/summary">
-                                        <i class="text-primary fa fa-fw fa-th"></i>  summary sales report
+                                        <i class="text-primary fa fa-compress "></i>  summary sales report
                                     </a>
                                 </li>
                            
@@ -270,6 +276,38 @@
     <script src="{{asset('asset/admin/vendors/jQuery-File-Upload/js/jquery.fileupload-validate.js')}}"></script>
     <script src="{{asset('asset/admin/vendors/holder/holder.js')}}" type="text/javascript"></script>
     <script src="{{asset('asset/admin/vendors/holder/holder.js')}}" type="text/javascript"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+
+<script type="text/javascript">
+    
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5',
+             'print'
+        ]
+    } );
+} );
+</script>
+
+
+
 </body>
 
 

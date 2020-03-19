@@ -59,6 +59,16 @@
     <link type="text/css" href="{{asset('asset/admin/css/custom_css/news.css" rel="stylesheet')}}" />
     <!-- end of page level css -->
 
+      <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+           <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+
+             <link href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" rel="stylesheet">
+           <!--   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet"> -->
+
+
     <style type="text/css">
         hr.new5 {
           border: 10px solid red;
@@ -74,7 +84,7 @@
         <nav class="navbar navbar-static-top">
             <a href="index-2.html" class="logo"> <!-- come back here and do real navigation-->
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                <img src="{{asset('asset/admin/img/logo.png')}}" alt="image not found">
+                <img src="{{asset('asset/admin/img/logo.png')}}" height="50" width="170" alt="image not found">
             </a>
             <!-- Header Navbar: style can be found in header-->
             <!-- Sidebar toggle button-->
@@ -145,14 +155,21 @@
                         <li>
                             <a href="{{ url('/receptionist/client/create') }}">
                                 <i class="text-success menu-icon fa fa-fw fa-user"></i>
-                                <span class="mm-text">Customer</span>
+                                <span class="mm-text">Client</span>
                             </a>
                         </li>
 
                          <li>
                             <a href="{{ url('/receptionist/payment') }}">
-                                <i class="text-success menu-icon fa fa-fw fa-money"></i>
+                                <i class="text-success menu-icon fa fa-fw fa-shopping-cart"></i>
                                 <span class="mm-text">Payment</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ url('/receptionist/session/create') }}">
+                                <i class="text-success menu-icon fa fa-fw fa-user"></i>
+                                <span class="mm-text">Session</span>
                             </a>
                         </li>
 
@@ -169,6 +186,34 @@
                                 <span class="mm-text">Company Attendance</span>
                             </a>
                         </li>
+
+                           <li class="menu-dropdown">
+                            <a href="#">
+                                <i class="text-warning menu-icon fa fa-handshake-o"></i>
+                                <span class="mm-text"> Handover</span>
+                                <span class="fa fa-angle-down pull-right"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/receptionist/report/daily">
+                                        <i class="text-primary fa fa-fw fa-sun-o"></i>  Daily sales report
+                                    </a>
+                                </li>
+                           
+                                
+                            </ul>
+
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/receptionist/report/summary">
+                                        <i class="text-primary fa fa-fw fa-compress"></i>  summary sales report
+                                    </a>
+                                </li>
+                           
+                                
+                            </ul>
+                        </li>
+ 
 
 
 
@@ -249,6 +294,36 @@
     <script src="{{asset('asset/admin/vendors/holder/holder.js')}}" type="text/javascript"></script>
     <script src="{{asset('asset/admin/vendors/holder/holder.js')}}" type="text/javascript"></script>
     <!-- end of page level js -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+
+<script type="text/javascript">
+    
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5',
+             'print'
+        ]
+    } );
+} );
+</script>
+
+
 </body>
 
 

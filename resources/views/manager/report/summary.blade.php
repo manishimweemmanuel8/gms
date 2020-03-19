@@ -4,7 +4,6 @@
 <aside class="right-side right-padding">
             <section class="content-header">
                 <!--section starts-->
-                <h2>Corporates Customer</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index-2.html">
@@ -12,10 +11,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Corporate Customer</a>
+                        <a href="#">Corporate</a>
                     </li>
                     <li>
-                        <a href="news.html">Corporates Customer</a>
+                        <a href="news.html">Sales Summary</a>
                     </li>
                 </ol>
             </section>
@@ -38,7 +37,7 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <i class="fa fa-fw fa-file-text-o"></i> Add Course Schedule
+                                    <i class="fa fa-fw fa-file-text-o"></i> Sales Summary From 
                                 </h4>
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
@@ -87,8 +86,8 @@
                                             <div class="form-actions">
                                                 <div class="row">
                                                     <div class="col-md-offset-3 col-md-7">
-                                                        <input type="submit" class="btn btn-primary" value="Add"> &nbsp;
-                                                        <input type="reset" class="btn btn-primary add-news-reset-editable" value="Reset">
+                                                        <input type="submit" class="btn btn-primary" value="Search"> &nbsp;
+                                                        <input type="reset" class="btn btn-white add-news-reset-editable" value="Reset">
                                                     </div>
                                                 </div>
                                             </div>
@@ -106,7 +105,7 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Customers
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Sales Summary
                             </h4>
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
@@ -114,7 +113,7 @@
                                 </span>
                             </div>
                             <div class="panel-body table-responsive">
-                                <table class="table table-bordered text-center" id="fitness-table">
+                                <table class="table table-bordered text-center" id="example">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Event Time</th>

@@ -34,10 +34,11 @@
                                 </span>
                             </div>
                             <div class="panel-body table-responsive">
-                                <table class="table table-bordered text-center" id="fitness-table">
+                                <table class="table table-bordered text-center" id="example">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Date</th>
+                                            <th class="text-center">Company ID</th>
                                             <th class="text-center">Names</th>
                                             <th class="text-center">Email</th>
                                             <th class="text-center">Representative</th>
@@ -49,9 +50,10 @@
                                         @foreach($corporates as $corporate)
                                         <tr>
                                             <td>{{$corporate->created_at}}</td>
+                                            <td>{{$corporate->id}}</td>
                                              <td>{{$corporate->names}}</td>
                                             <td>{{$corporate->email}}</td>
-                                            <td>{{$corporate->representative}}</td>
+                                            <td>{{DB::table('customers')->where('id',$corporate->representative)->value("names")}}</td>
                                             
                                            <td>
                                                 <a class="edit btn btn-primary" href="{{route('corporate.edit',['id'=>$corporate->id])}}">

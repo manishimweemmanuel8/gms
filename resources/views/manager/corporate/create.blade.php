@@ -32,6 +32,8 @@
                                 <h4 class="panel-title">
                                     <i class="fa fa-fw fa-user"></i> Add Corporate
                                 </h4>
+                               
+
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
                                     <i class="glyphicon glyphicon-remove removepanel"></i>
@@ -86,6 +88,11 @@
                                                          <button type="submit" class="btn btn-primary">Add</button>
                                                         
                                                         <input type="reset" class="btn btn-white " value="Reset">
+
+                                                          <a href="{{ url('/manager/corporate') }}" class="btn btn-primary ">
+                                                            <i ></i>
+                                                            <span class="mm-text">View</span>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>

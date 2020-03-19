@@ -4,7 +4,6 @@
 <aside class="right-side right-padding">
             <section class="content-header">
                 <!--section starts-->
-                <h2>Corporates Customer</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index-2.html">
@@ -12,10 +11,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Corporate Customer</a>
+                        <a href="#">Corporate </a>
                     </li>
                     <li>
-                        <a href="news.html">Corporates Customer</a>
+                        <a href="news.html">Daily Sales</a>
                     </li>
                 </ol>
             </section>
@@ -43,7 +42,7 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Customers
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Daily sales
                             </h4>
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
@@ -51,7 +50,7 @@
                                 </span>
                             </div>
                             <div class="panel-body table-responsive">
-                                <table class="table table-bordered text-center" id="fitness-table">
+                                <table class="table table-bordered text-center" id="example">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Event Time</th>
@@ -65,8 +64,8 @@
                                         @foreach($payments as $payment)
                                         <tr>
                                             <td>{{$payment->created_at}}</td>
-                                             <td>{{$payment->customer_id}}</td>
-                                            <td>{{$payment->subscription_id}}</td>
+                                             <td>{{DB::table('customers')->where('id',$payment->customer_id)->value("names")}}</td>
+                                            <td>{{DB::table('subscriptions')->where('id',$payment->subscription_id)->value("name")}}</td>
                                             <td>{{$payment->amount}}</td>
                                            
                                          

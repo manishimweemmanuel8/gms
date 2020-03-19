@@ -4,7 +4,6 @@
 <aside class="right-side right-padding">
             <section class="content-header">
                 <!--section starts-->
-                <!-- <h2>Individual Customer</h2> -->
                 <ol class="breadcrumb">
                     <li>
                         <a href="index-2.html">
@@ -12,10 +11,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"> Payment</a>
+                        <a href="#">Session</a>
                     </li>
                     <li>
-                        <a href="news.html">Individual Payment</a>
+                        <a href="news.html">Session Customer</a>
                     </li>
                 </ol>
             </section>
@@ -33,7 +32,7 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Payment List
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Session List
                             </h4>
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
@@ -46,33 +45,21 @@
                                         <tr>
                                             <th class="text-center">Date</th>
                                             <th class="text-center">Customer</th>
-<!--                                             <th class="text-center">Receptionist</th>
- -->                                            <th class="text-center">Subscription</th>
+                                            <th class="text-center">Receptionist</th>
+                                            <!-- <th class="text-center">Subscription</th> -->
                                             <th class="text-center">Amount</th>
-                                            <th class="text-center">Expiration Date</th>
-                                            <th class="text-center">Edit/Save</th>
-                                            <th class="text-center">Delete/Cancel</th>
+                                            <!-- <th class="text-center">Expiration Date</th> -->
+                                       
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($payments as $payment)
+                                        @foreach($sessions as $session)
                                         <tr>
-                                            <td>{{$payment->created_at}}</td>
-                                             <td>{{DB::table('customers')->where('id',$payment->customer_id)->value("names")}}</td>
+                                            <td>{{$session->created_at}}</td>
+                                             <td>{{DB::table('customers')->where('id',$session->customer_id)->value("phone")}}</td>
+                                            <td>{{DB::table('receptionists')->where('id',$session->receptionist_id)->value("name")}}</td>
+                                            <td>{{$session->amount}}</td>
                                            
-                                            <td>{{DB::table('subscriptions')->where('id',$payment->subscription_id)->value("name")}}</td>
-                                            <td>{{$payment->amount}}</td>
-                                            <td>{{$payment->expirydate}}</td>
-                                           <td>
-                                                <a class="edit btn btn-primary" href="{{route('payments.edit',['id'=>$payment->id])}}">
-                                                    <i class="fa fa-fw fa-edit"></i> Edit
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a class="delete btn btn-danger" href="{{route('payments.destroy',['id'=>$payment->id])}}">
-                                                    <i class="fa fa-trash-o"></i> Delete
-                                                </a>
-                                            </td>
                                            
                                       </tr>
                                        @endforeach

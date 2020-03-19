@@ -4,7 +4,6 @@
 <aside class="right-side right-padding">
             <section class="content-header">
                 <!--section starts-->
-                <h2>Corporates Customer</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index-2.html">
@@ -12,7 +11,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Corporate Customer</a>
+                        <a href="#">Corporate</a>
                     </li>
                     <li>
                         <a href="news.html">Corporates Customer</a>
@@ -32,10 +31,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <!-- First Basic Table strats here-->
-                        <div class="panel panel-success">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title">
-                                    <i class="fa fa-fw fa-picture-o"></i> Add File
+                                    <i class="fa fa-fw fa-file"></i> Add File
                                 </h3>
                             </div>
                             <div class="panel-body" style="padding:30px;">
@@ -78,7 +77,7 @@
                                 </span>
                             </div>
                             <div class="panel-body table-responsive">
-                                <table class="table table-bordered text-center" id="fitness-table">
+                                <table class="table table-bordered text-center" id="example">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Date</th>
@@ -97,7 +96,7 @@
                                              <td>{{$customer->cardCode}}</td>
                                             <td>{{$customer->names}}</td>
                                             <td>{{$customer->phone}}</td>
-                                            <td>{{$customer->corporate_id}}</td>
+                                            <td>{{$customer->corporate->names}}</td>
                                            <td>
                                                 <a class="edit btn btn-primary" href="{{route('customer.edit',['id'=>$customer->id])}}">
                                                     <i class="fa fa-fw fa-edit"></i> Edit

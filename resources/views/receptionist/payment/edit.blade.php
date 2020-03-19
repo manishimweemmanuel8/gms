@@ -6,7 +6,6 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <!--section starts-->
-                <h2>Edit Corporate</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="">
@@ -14,10 +13,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Corporate Payment</a>
+                        <a href="#"> Payment</a>
                     </li>
                     <li>
-                        <a href="add_users.html" class="activated">Edit Corporate Payment</a>
+                        <a href="add_users.html" class="activated">Edit Individual Payment</a>
                     </li>
                 </ol>
             </section>
@@ -30,7 +29,7 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <i class="fa fa-fw fa-user"></i> Edit Corporate Payment
+                                    <i class="fa fa-fw fa-user"></i> Edit Individual Payment
                                 </h4>
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
@@ -61,7 +60,7 @@
                                                                 <i class="fa fa-fw fa-user-md text-primary"></i>
                                                             </span>
                                                         <select class="form-control" name="subscription_id" id="courses">
-                                                            <option value="{{$payment->subscription_id}}">{{$payment->subscription_id}}</option>
+                                                            <option value="{{$payment->subscription_id}}">{{DB::table('subscriptions')->where('id',$payment->subscription_id)->value('name')}}</option>
                                                             @foreach ($subscriptions as $subscription)
                                                             <option value="{{ $subscription->id }}">{{ $subscription->name}}</option>
                                                             @endforeach
@@ -99,6 +98,12 @@
                                                         <button type="submit" class="btn btn-primary">Edit</button>
                                                         
                                                         <input type="reset" class="btn btn-white " value="Reset">
+
+                                                          <a href="{{ url('/receptionist/payment') }}" class="btn btn-primary ">
+                                                            <i ></i>
+                                                            <span class="mm-text">View</span>
+                                                        </a>
+
                                                     </div>
                                                 </div>
                                             </div>

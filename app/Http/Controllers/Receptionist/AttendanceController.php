@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\Attendance;
 use Illuminate\Http\Request;
+use Auth;
 
 class AttendanceController extends Controller
 {
@@ -17,7 +18,7 @@ class AttendanceController extends Controller
     public function index()
     {
         //
-        $individuals = Attendance::all();
+        $individuals = Attendance::where('receptionist_id',Auth::guard('receptionist')->user()->id)->get();
         return view('receptionist/individual.index', compact('individuals'));
     }
 

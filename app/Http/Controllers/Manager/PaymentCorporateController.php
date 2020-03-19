@@ -31,7 +31,7 @@ class PaymentCorporateController extends Controller
         {
             $corporates=null;
         if(!$corporate_id){
-            $corporates=DB::table('corporates')->get();
+            $corporates=Corporate::where('names','!=','self')->get();
         }
        
 
@@ -85,7 +85,7 @@ class PaymentCorporateController extends Controller
     {
          $corporates=null;
         if(!$corporate_id){
-            $corporates=Corporate::all();
+            $corporates=Corporate::where('names','!=','self')->get();
         }
         $payment = PaymentCorporate::find($id);
 

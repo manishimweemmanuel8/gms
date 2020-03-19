@@ -6,7 +6,6 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <!--section starts-->
-                <h2>Add Corporate Customer</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="">
@@ -14,10 +13,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Corporate Customer</a>
+                        <a href="#"> Client</a>
                     </li>
                     <li>
-                        <a href="add_users.html" class="activated">Add Corporate Customer</a>
+                        <a href="add_users.html" class="activated">Add Individual Client</a>
                     </li>
                 </ol>
             </section>
@@ -30,7 +29,7 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <i class="fa fa-fw fa-user"></i> Add Corporate Customer
+                                    <i class="fa fa-fw fa-user"></i> Add Individual Client
                                 </h4>
                                 <span class="pull-right">
                                     <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
@@ -144,6 +143,12 @@
                                                          <button type="submit" class="btn btn-primary">Add</button>
                                                         
                                                         <input type="reset" class="btn btn-white " value="Reset">
+
+                                                          <a href="{{ url('/receptionist/client') }}" class="btn btn-primary ">
+                                                            <i ></i>
+                                                            <span class="mm-text">View</span>
+                                                        </a>
+
                                                     </div>
                                                 </div>
                                             </div>

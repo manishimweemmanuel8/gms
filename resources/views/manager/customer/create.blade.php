@@ -6,7 +6,6 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <!--section starts-->
-                <h2>Add Corporate Customer</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="">
@@ -14,7 +13,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Corporate Customer</a>
+                        <a href="#">Corporate</a>
                     </li>
                     <li>
                         <a href="add_users.html" class="activated">Add Corporate Customer</a>
@@ -122,6 +121,11 @@
                                                          <button type="submit" class="btn btn-primary">Add</button>
                                                         
                                                         <input type="reset" class="btn btn-white " value="Reset">
+
+                                                          <a href="{{ url('/manager/customer') }}" class="btn btn-primary ">
+                                                            <i ></i>
+                                                            <span class="mm-text">View</span>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
